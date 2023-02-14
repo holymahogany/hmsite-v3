@@ -30,7 +30,7 @@ const ArtHistorian = () => {
               Art Historian
             </div>
             <div className={styles["art-historian__text-body"]}>
-              I’m a student of modern art, from high to low, pop culture to
+              I’m a student of modern art, from high to low, avant-garde to
               kitsch. My research centers on newspaper comics and abstract
               painting.
             </div>
