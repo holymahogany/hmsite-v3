@@ -6,12 +6,11 @@
   --background-color-light: #fdfaf5;
   --background-color-dark: #000000;
   --title-color: #ec7357;
-  --link-color: #636363;
+  --link-color: #1e1e1e;
   background-color: var(--background-color-light);
 }
 .header-foreground {
   display: flex;
-
   z-index: 2;
   position: absolute;
   width: 100%;
@@ -68,27 +67,21 @@
 .header-right__peter-smyth-container {
   display: flex;
   flex-direction: column;
-
   margin-top: 0px;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 .header-right__peter-smyth-container > * {
-  margin: 0;
-
+  margin-bottom: 0px;
   font-size: 120px;
   font-weight: 700;
   line-height: 0.8em;
-
   align-self: center;
-
   color: var(--title-color);
 }
 .header-right__links {
   display: flex;
-
   font-size: 25px;
   font-weight: 700;
-
   margin-bottom: 10px;
 }
 .header-right__links > a {

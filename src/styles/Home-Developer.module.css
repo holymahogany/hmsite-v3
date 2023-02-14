@@ -1,12 +1,14 @@
-/* Artist */
+/* Developer */
 
-.artist {
+.developer {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #ec7357;
+  background-color: #fdfaf5;
+  --title-color: #ec7357;
+  --body-color: #1e1e1e;
 }
-.artist-container {
+.developer-container {
   position: relative;
   display: flex;
   align-items: center;
@@ -18,44 +20,48 @@
   width: 120%;
   height: 100%;
 }
-.artist__text-outer-container {
-  flex-basis: 340px;
+.developer__text-outer-container {
+  flex-basis: 450px;
   display: flex;
-  color: #fdfaf5;
 }
-.artist__text-headline {
+.developer__text-headline {
+  color: var(--title-color);
   font-size: 70px;
   font-weight: 700;
   line-height: 0.8em;
   margin-bottom: 22px;
 }
-.artist__text-body {
+.developer__text-body {
+  color: var(--body-color);
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 22px;
 }
-.artist__watercolor-portrait-container-outer-one,
-.artist__watercolor-portrait-container-outer-two,
-.artist__watercolor-portrait-container-outer-three {
+.developer__drawing-container-outer-one,
+.developer__drawing-container-outer-two,
+.developer__drawing-container-outer-three {
   flex: 0;
   position: relative;
 }
-.artist__watercolor-portrait-container-inner {
+.developer__drawing-container-inner {
   display: flex;
   justify-content: center;
 }
-.artist__watercolor-portrait {
+.developer__drawing {
   border-radius: 10px;
+  opacity: 40%;
 }
 
-.button {
+.button,
+.button2 {
+  display: inline;
   align-items: center;
-  background-color: #fdfaf5;
-  color: #ec7357;
+  background-color: #ec7357;
+  color: #fdfaf5;
   border-radius: 12px;
   box-sizing: border-box;
   padding: 0.6rem 0.6rem 0.6rem 1rem;
-  width: 140px;
+  margin-right: 10px;
   color: val(--link);
   cursor: pointer;
   font-family: Inter, sans-serif;
@@ -69,76 +75,96 @@
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-.button span {
+.button {
+  width: 165px;
+}
+.button2 {
+  width: 225px;
+}
+.button span,
+.button2 span {
   width: 0px;
   min-width: 100%;
   margin-right: 5px;
   transition: margin-right 0.2s;
 }
-.button:hover span {
+.button:hover span,
+.button2:hover span {
   margin-right: 8px;
   transition: margin-right 0.2s;
 }
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 601px) and (max-width: 1200px) {
-  .artist-container {
+  .developer-container {
     flex-wrap: wrap;
     justify-content: center;
     margin-left: -100%;
+    padding-bottom: 40px;
     width: 300%;
     gap: 0px;
     column-gap: 50px;
   }
-  .artist__text-outer-container {
+  .developer__text-outer-container {
     justify-content: center;
     flex: 1 0 100%;
     order: -1;
     margin-bottom: 50px;
   }
-  .artist__text-inner-container {
+  .developer__text-inner-container {
     text-align: center;
-    width: 340px;
+    width: 440px;
   }
-  .artist__watercolor-portrait-container-outer-one,
-  .artist__watercolor-portrait-container-outer-two,
-  .artist__watercolor-portrait-container-outer-three {
+  .developer__drawing-container-outer-one,
+  .developer__drawing-container-outer-two,
+  .developer__drawing-container-outer-three {
     flex: 0;
   }
 }
 
 @media (max-width: 600px) {
-  .artist-container {
+  .developer-container {
     flex-wrap: wrap;
     justify-content: center;
     margin-left: -100vw;
+    padding-bottom: 40px;
     width: 300vw;
     gap: 0px;
     column-gap: 0px;
   }
-  .artist__text-outer-container {
+  .developer__text-outer-container {
     justify-content: center;
     flex: 1 0 100%;
     order: -1;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
-  .artist__text-inner-container {
+  .developer__text-inner-container {
     text-align: center;
     width: 85vw;
   }
-  .artist__watercolor-portrait-container-outer-one {
-    margin-right: -40px;
+  .developer__drawing-container-outer-one {
+    margin-right: -30px;
   }
-  .artist__watercolor-portrait-container-outer-two {
+  .developer__drawing-container-outer-two {
     margin-right: 0vw;
   }
-  .artist__watercolor-portrait-container-outer-three {
-    margin-left: -40px;
+  .developer__drawing-container-outer-three {
+    margin-left: -30px;
   }
-  .artist__watercolor-portrait {
+  .developer__drawing {
     width: 200px;
     height: 200px;
-    /* offset-x | offset-y | blur-radius | spread-radius | color */
-    box-shadow: 0px 0px 8px 4px rgb(236, 115, 87, 0.4);
+  }
+  .button,
+  .button2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    display: block;
+  }
+}
+@media (max-width: 400px) {
+  .developer__text-headline {
+    font-size: 16vw;
   }
 }
