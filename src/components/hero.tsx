@@ -16,11 +16,35 @@ const imgPaths = {
   selfPortrait: "/static/img/hero/selfPortrait.webp",
   toprow: "/static/img/hero/toprow.webp",
   bottomrow: "/static/img/hero/bottomrow.webp",
+  toprowMobile: "/static/img/hero/toprowMobile.webp",
+  bottomrowMobile: "/static/img/hero/bottomrowMobile.webp",
+};
+
+// this hook will be true if accessed during Server-Side Rendering, false if not
+const useIsSsr = () => {
+  // we always start off in "SSR mode", to ensure our initial browser render
+  // matches the SSR render
+  const [isSsr, setIsSsr] = useState(true);
+
+  useEffect(() => {
+    // `useEffect` never runs on the server, so we must be on the client if
+    // we hit this block
+    setIsSsr(false);
+  }, []);
+
+  return isSsr;
 };
 
 const Hero = () => {
   const imgRowWidth = 1400; //(140 + 35) * 8; // 140 is the width & height of BackgroundImg, 35 is its margin-right
   const bgAnimationSpeed = 12; // in seconds
+
+  let mobile = false;
+
+  const isSsr = useIsSsr();
+  if (!isSsr) {
+    mobile = window.innerWidth <= 600;
+  }
 
   return (
     <div className={styles["header"]}>
@@ -141,13 +165,14 @@ const Hero = () => {
           >
             <div className={styles["header-background-imgrow"]}>
               <Image
-                src={imgPaths.toprow}
+                src={mobile ? imgPaths.toprowMobile : imgPaths.toprow}
                 className={styles["header-background-img"]}
                 alt="Musician or musical object"
-                width={4200}
+                width={mobile ? 2800 : 4200}
                 height={140}
                 priority={true}
               />
+              )
             </div>
           </motion.div>
         </div>
@@ -166,13 +191,14 @@ const Hero = () => {
           >
             <div className={styles["header-background-imgrow"]}>
               <Image
-                src={imgPaths.toprow}
+                src={mobile ? imgPaths.bottomrowMobile : imgPaths.bottomrow}
                 className={styles["header-background-img"]}
                 alt="Musician or musical object"
-                width={4200}
+                width={mobile ? 2800 : 4200}
                 height={140}
                 priority={true}
               />
+              )
             </div>
           </motion.div>
         </div>

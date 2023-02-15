@@ -29,7 +29,7 @@ images2 = [
 def picturesIntoRow(imgPaths, outputName):
   iconSize = 500 # pixels
   gapBetweenIcons = 125 # pixels
-  timesToRepeat = 3
+  timesToRepeat = 1
 
   canvasWidth = ((iconSize * len(imgPaths)) + (gapBetweenIcons * len(imgPaths))) * timesToRepeat
   canvas = Image.new("RGBA", (canvasWidth, iconSize), (255, 255, 255, 0))

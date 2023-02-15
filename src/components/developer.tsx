@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 import styles from "@/styles/Home-Developer.module.css";
@@ -10,8 +12,30 @@ const imgPaths = {
   object3: "/static/img/hero/object7.webp",
 };
 
+// this hook will be true if accessed during Server-Side Rendering, false if not
+const useIsSsr = () => {
+  // we always start off in "SSR mode", to ensure our initial browser render
+  // matches the SSR render
+  const [isSsr, setIsSsr] = useState(true);
+
+  useEffect(() => {
+    // `useEffect` never runs on the server, so we must be on the client if
+    // we hit this block
+    setIsSsr(false);
+  }, []);
+
+  return isSsr;
+};
+
 const Developer = () => {
   const drawingSize = 300;
+
+  let mobile = false;
+
+  const isSsr = useIsSsr();
+  if (!isSsr) {
+    mobile = window.innerWidth <= 600;
+  }
 
   return (
     <div className={styles["developer"]} id="developer">
@@ -19,7 +43,7 @@ const Developer = () => {
         <div className={styles["developer__drawing-container-outer-one"]}>
           <motion.div
             className={styles["developer__drawing-container-inner"]}
-            initial={{ opacity: 0, x: -60 }}
+            initial={mobile ? { opacity: 1, x: 0 } : { opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{
@@ -40,7 +64,7 @@ const Developer = () => {
         <div className={styles["developer__drawing-container-outer-two"]}>
           <motion.div
             className={styles["developer__drawing-container-inner"]}
-            initial={{ opacity: 0, x: 0 }}
+            initial={mobile ? { opacity: 1, x: 0 } : { opacity: 0, x: 0 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{
@@ -61,7 +85,7 @@ const Developer = () => {
         <div className={styles["developer__text-outer-container"]}>
           <motion.div
             className={styles["developer__text-inner-container"]}
-            initial={{ opacity: 0, x: 0 }}
+            initial={mobile ? { opacity: 1, x: 0 } : { opacity: 0, x: 0 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{
@@ -96,7 +120,7 @@ const Developer = () => {
         <div className={styles["developer__drawing-container-outer-three"]}>
           <motion.div
             className={styles["developer__drawing-container-inner"]}
-            initial={{ opacity: 0, x: 60 }}
+            initial={mobile ? { opacity: 1, x: 0 } : { opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{
