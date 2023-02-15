@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const imgPaths = {
-  waterColorPortrait1: "/static/img/hero/waterColorPortrait1.webp",
-  waterColorPortrait2: "/static/img/hero/waterColorPortrait2.webp",
-  waterColorPortrait3: "/static/img/hero/waterColorPortrait3.webp",
+  waterColorPortrait1: "/static/img/hero/watercolorPortrait1.webp",
+  waterColorPortrait2: "/static/img/hero/watercolorPortrait2.webp",
+  waterColorPortrait3: "/static/img/hero/watercolorPortrait3.webp",
 };
 
 const Artist = () => {
