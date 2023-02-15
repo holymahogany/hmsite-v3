@@ -14,45 +14,9 @@ import { faAsterisk } from "@fortawesome/free-solid-svg-icons";
 
 const imgPaths = {
   selfPortrait: "/static/img/hero/selfPortrait.webp",
-  figure1: "/static/img/hero/figure1.webp",
-  figure2: "/static/img/hero/figure2.webp",
-  figure3: "/static/img/hero/figure3.webp",
-  figure4: "/static/img/hero/figure4.webp",
-  figure5: "/static/img/hero/figure5.webp",
-  figure6: "/static/img/hero/figure6.webp",
-  figure7: "/static/img/hero/figure7.webp",
-  figure8: "/static/img/hero/figure8.webp",
-  figure9: "/static/img/hero/figure9.webp",
-  figure10: "/static/img/hero/figure10.webp",
-  object1: "/static/img/hero/object1.webp",
-  object2: "/static/img/hero/object2.webp",
-  object3: "/static/img/hero/object3.webp",
-  object4: "/static/img/hero/object4.webp",
-  object5: "/static/img/hero/object5.webp",
-  object6: "/static/img/hero/object6.webp",
-  object7: "/static/img/hero/object7.webp",
-  object8: "/static/img/hero/object8.webp",
+  toprow: "/static/img/hero/toprow.webp",
+  bottomrow: "/static/img/hero/bottomrow.webp",
 };
-const toprowSources = [
-  imgPaths.figure1,
-  imgPaths.object1,
-  imgPaths.figure2,
-  imgPaths.object2,
-  imgPaths.figure3,
-  imgPaths.object3,
-  imgPaths.figure4,
-  imgPaths.object4,
-];
-const bottomrowSources = [
-  imgPaths.object5,
-  imgPaths.figure5,
-  imgPaths.object6,
-  imgPaths.figure6,
-  imgPaths.object7,
-  imgPaths.figure8,
-  imgPaths.object8,
-  imgPaths.figure9,
-];
 
 const Hero = () => {
   const imgRowWidth = 1400; //(140 + 35) * 8; // 140 is the width & height of BackgroundImg, 35 is its margin-right
@@ -175,38 +139,15 @@ const Hero = () => {
               duration: bgAnimationSpeed,
             }}
           >
-            <div className={styles["header-background-imgrow"]} id="toprow1">
-              <BackgroundImgRow sources={toprowSources} />
-            </div>
-          </motion.div>
-          <motion.div
-            animate={{
-              x: [0, imgRowWidth * -1],
-            }}
-            transition={{
-              ease: "linear",
-              repeat: Infinity,
-              repeatType: "loop",
-              duration: bgAnimationSpeed,
-            }}
-          >
-            <div className={styles["header-background-imgrow"]} id="toprow2">
-              <BackgroundImgRow sources={toprowSources} />
-            </div>
-          </motion.div>
-          <motion.div
-            animate={{
-              x: [0, imgRowWidth * -1],
-            }}
-            transition={{
-              ease: "linear",
-              repeat: Infinity,
-              repeatType: "loop",
-              duration: bgAnimationSpeed,
-            }}
-          >
-            <div className={styles["header-background-imgrow"]} id="toprow3">
-              <BackgroundImgRow sources={toprowSources} />
+            <div className={styles["header-background-imgrow"]}>
+              <Image
+                src={imgPaths.toprow}
+                className={styles["header-background-img"]}
+                alt="Musician or musical object"
+                width={4200}
+                height={140}
+                priority={true}
+              />
             </div>
           </motion.div>
         </div>
@@ -223,38 +164,15 @@ const Hero = () => {
               duration: bgAnimationSpeed,
             }}
           >
-            <div className={styles["header-background-imgrow"]} id="bottomrow1">
-              <BackgroundImgRow sources={bottomrowSources} />
-            </div>
-          </motion.div>
-          <motion.div
-            animate={{
-              x: [imgRowWidth * -1, 0],
-            }}
-            transition={{
-              ease: "linear",
-              repeat: Infinity,
-              repeatType: "loop",
-              duration: bgAnimationSpeed,
-            }}
-          >
-            <div className={styles["header-background-imgrow"]} id="bottomrow2">
-              <BackgroundImgRow sources={bottomrowSources} />
-            </div>
-          </motion.div>
-          <motion.div
-            animate={{
-              x: [imgRowWidth * -1, 0],
-            }}
-            transition={{
-              ease: "linear",
-              repeat: Infinity,
-              repeatType: "loop",
-              duration: bgAnimationSpeed,
-            }}
-          >
-            <div className={styles["header-background-imgrow"]} id="bottomrow3">
-              <BackgroundImgRow sources={bottomrowSources} />
+            <div className={styles["header-background-imgrow"]}>
+              <Image
+                src={imgPaths.toprow}
+                className={styles["header-background-img"]}
+                alt="Musician or musical object"
+                width={4200}
+                height={140}
+                priority={true}
+              />
             </div>
           </motion.div>
         </div>
@@ -263,23 +181,5 @@ const Hero = () => {
     </div>
   );
 };
-
-// Hero uses six of these: 3 on top, 3 on bottom
-function BackgroundImgRow({ sources }: { sources: string[] }) {
-  const row = sources.map((src) => <BackgroundImg src={src} key={src} />);
-  return <>{row}</>;
-}
-function BackgroundImg({ src }: { src: string }) {
-  return (
-    <Image
-      src={src}
-      className={styles["header-background-img"]}
-      alt="Musician or musical object"
-      width={140}
-      height={140}
-      priority={true}
-    />
-  );
-}
 
 export default Hero;
