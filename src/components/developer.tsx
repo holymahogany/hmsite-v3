@@ -83,21 +83,12 @@ const Developer = () => {
           </motion.div>
         </div>
         <div className={styles["developer__text-outer-container"]}>
-          <motion.div
-            className={styles["developer__text-inner-container"]}
-            initial={mobile ? { opacity: 1, x: 0 } : { opacity: 0, x: 0 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.8,
-              delay: 0.3,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-          >
+          <div className={styles["developer__text-inner-container"]}>
             <div className={styles["developer__text-headline"]}>Developer</div>
             <div className={styles["developer__text-body"]}>
-              Fascinated by art that’s generative and interactive, I build video
-              games and websites using technologies like Pico-8 and React.
+              I like art that’s generative and interactive, so I build games and
+              websites using things like Pico-8, Puzzlescript, and this or that
+              JavaScript framework.
             </div>
             <a href="https://holymahogany.itch.io/">
               <button className={styles["button"]}>
@@ -115,7 +106,7 @@ const Developer = () => {
                 icon={faArrowRight}
               />
             </button> */}
-          </motion.div>
+          </div>
         </div>
         <div className={styles["developer__drawing-container-outer-three"]}>
           <motion.div

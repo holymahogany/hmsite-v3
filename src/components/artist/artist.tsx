@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "@mui/material";
+import { useRef } from "react";
+
 import styles from "@/styles/Home-Artist.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { TextStatic, TextAnimated } from "./text";
 
 const imgPaths = {
   waterColorPortrait1: "/static/img/hero/watercolorPortrait1.webp",
@@ -12,6 +14,10 @@ const imgPaths = {
 
 const Artist = () => {
   const watercolorPortraitSize = 300;
+
+  let isMobile = useMediaQuery("(max-width:600px)");
+  const wasEverMobile = useRef(false);
+  if (isMobile) wasEverMobile.current = true;
 
   return (
     <div className={styles["artist"]} id="artist">
@@ -40,33 +46,14 @@ const Artist = () => {
           </motion.div>
         </div>
         <div className={styles["artist__text-outer-container"]}>
-          <motion.div
-            className={styles["artist__text-inner-container"]}
-            initial={{ opacity: 0, x: 0 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.8,
-              delay: 0.3,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-          >
-            <div className={styles["artist__text-headline"]}>Artist</div>
-            <div className={styles["artist__text-body"]}>
-              Taking inspiration from the “ligne claire” tradition pioneered by
-              Hergé (the creator of Tintin), I make drawings and paintings with
-              clear lines and bold colors.
-            </div>
-            <a href="https://www.instagram.com/peterjacobsmyth/">
-              <button className={styles["button"]}>
-                <span>FIND MY ART</span>
-                <FontAwesomeIcon
-                  className={styles["button-arrow"]}
-                  icon={faArrowRight}
-                />
-              </button>
-            </a>
-          </motion.div>
+          <TextStatic />
+          {/* {isMobile ? (
+            <TextStatic />
+          ) : wasEverMobile.current ? (
+            <TextStatic />
+          ) : (
+            <TextAnimated />
+          )} */}
         </div>
         <div
           className={styles["artist__watercolor-portrait-container-outer-two"]}
