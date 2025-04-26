@@ -36,7 +36,9 @@
     margin-bottom: 22px;
   }
   .summary__text-body a {
-    text-decoration: underline 0.1em;
+    text-decoration: underline;
+
+  text-decoration-thickness: 0.1em;
   }
   
   /* Tablet and Smaller Desktop */
