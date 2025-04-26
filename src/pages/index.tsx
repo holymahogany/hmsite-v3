@@ -3,9 +3,6 @@ import Head from "next/head";
 import Hero from "@/components/hero/hero";
 import Summary from "@/components/summary";
 import Projects from "@/components/projects";
-import Artist from "@/components/artist/artist";
-import Developer from "@/components/developer";
-import ArtHistorian from "@/components/artHistorian";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -40,7 +37,6 @@ export default function Home() {
       <Hero />
       <Summary />
       <Projects />
-
       <Footer />
     </>
   );
