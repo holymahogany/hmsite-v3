@@ -21,13 +21,16 @@ const Summary = () => {
             storytelling.
           </div>
           <div className={styles["summary__text-body"]}>
-            From bold posters and editorial layouts to immersive websites and
-            video games, my work blends creativity with purpose. I’ve designed
-            magazine covers, built digital experiences, illustrated for clients,
-            and brought game worlds to life. I also teach art and art history,
-            sharing my love for visual culture and helping others develop their
-            creative voice. Whether it’s print, web, or interactive media, I
-            approach every project with a focus on clarity, emotion, and impact.
+            From <a href="#posters">bold posters</a> and{" "}
+            <a href="#editorial">editorial illustrations</a> to{" "}
+            <a href="#webdev">immersive websites</a> and{" "}
+            <a href="#games">video games</a>, my work blends creativity with
+            purpose. I’ve designed magazine covers, built digital experiences,
+            illustrated for clients, and brought game worlds to life. I also
+            teach art and art history, sharing my love for visual culture and
+            helping others develop their creative voice. Whether it’s print,
+            web, or interactive media, I approach every project with a focus on
+            clarity, emotion, and impact.
           </div>
         </div>
       </div>

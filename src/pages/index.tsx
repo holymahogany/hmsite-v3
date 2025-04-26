@@ -3,7 +3,6 @@ import Head from "next/head";
 import Hero from "@/components/hero/hero";
 import Summary from "@/components/summary";
 import Projects from "@/components/projects";
-import Posters from "@/components/posters";
 import Artist from "@/components/artist/artist";
 import Developer from "@/components/developer";
 import ArtHistorian from "@/components/artHistorian";
@@ -41,10 +40,7 @@ export default function Home() {
       <Hero />
       <Summary />
       <Projects />
-      <Posters />
-      <Artist />
-      <Developer />
-      <ArtHistorian />
+
       <Footer />
     </>
   );

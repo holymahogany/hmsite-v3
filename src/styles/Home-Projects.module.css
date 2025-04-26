@@ -37,16 +37,19 @@
     font-size: 3em;
     font-weight: 700;
     margin-top: 50px;
-    margin-bottom: 25px;
+    margin-bottom: -10px;
   }
   .projects__text-body {
     max-width: 1000px;
     font-size: 18px;
     font-weight: 500;
-    margin-bottom: 22px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .projects__text-body a {
+    text-decoration: underline 0.1em;
   }
   .projects__images {
-    margin-top: 20px;
     max-width: 800px;
     width: 90%;
   }
@@ -69,20 +72,19 @@
       }
       .projects__text-giant-headline {
         font-size: 3em;
-        
       }
       .projects__text-headline {
         max-width: 85vw;
         font-size: 25px;
         margin-top: 35px;
-        margin-bottom: 20px;
+        margin-bottom: -10px;
       }
       .projects__text-body {
         font-size: 14px;
+        margin-top: 30px;
+        margin-bottom: 30px;
       }
-      .projects__images {
-        margin-top: 15px;
-      }
+      
   }
 
   

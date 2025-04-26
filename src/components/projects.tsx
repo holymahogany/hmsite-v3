@@ -12,6 +12,14 @@ const imgPaths = {
   Poster1: "/static/img/hero/Poster1.webp",
   Poster2: "/static/img/hero/Poster2.webp",
   Poster3: "/static/img/hero/Poster3.webp",
+
+  thinIce: "/static/img/hero/thinIce.gif",
+  puttingTheBlocksAway: "/static/img/hero/puttingTheBlocksAway.webp",
+
+  groceryStore: "/static/img/hero/grocery_store.webp",
+  things1: "/static/img/hero/25_things.webp",
+  things2: "/static/img/hero/25_things_num2.webp",
+  readingWhileWalking: "/static/img/hero/reading_while_walking.webp",
 };
 
 const Projects = () => {
@@ -26,7 +34,7 @@ const Projects = () => {
           <div className={styles["projects__text-giant-headline"]}>
             Projects
           </div>
-          <div className={styles["projects__text-headline"]}>
+          <div className={styles["projects__text-headline"]} id="webdev">
             Healthcare Site Frontend Redesign
           </div>
           <div className={styles["projects__text-body"]}>
@@ -68,7 +76,7 @@ const Projects = () => {
               height={735}
             />
           </div>
-          <div className={styles["projects__text-headline"]}>
+          <div className={styles["projects__text-headline"]} id="posters">
             University Speaking Event Posters
           </div>
           <div className={styles["projects__text-body"]}>
@@ -102,35 +110,109 @@ const Projects = () => {
               height={1595}
             />
           </div>
-          <div className={styles["projects__text-headline"]}>
+          <div className={styles["projects__text-headline"]} id="games">
             Independent Game Projects
           </div>
           <div className={styles["projects__text-body"]}>
-            As an independent game designer, I’ve taken on every aspect of
-            development—from concept to publishing—across multiple self-driven
-            projects. My work reflects a passion for tight mechanics, compelling
-            design, and player-first experiences.
+            As an independent game designer (under the pen name "Holy
+            Mahogany"), I’ve taken on every aspect of development—from concept
+            to publishing—across multiple self-driven projects. My work reflects
+            a passion for tight mechanics, compelling design, and player-first
+            experiences.
             <br /> <br />
-            One of my flagship projects, Thin Ice, is a fully-featured 2D
-            platformer, built in Pico-8, the fantasy console known for inspiring
-            creative constraints. This game showcases dynamic level design,
-            responsive controls, and custom pixel art. The sound effects and
-            music were composed by the accomplished games musician Gruber, whose
-            work brought an extra layer of polish and atmosphere to the
-            experience. The game is available publicly on itch.io, and reflects
-            my commitment to crafting polished, replayable gameplay loops and
-            intuitive user experiences.
-            <br /> <br />
-            I also created Putting the Blocks Away, a minimalist puzzle game
-            that emphasizes elegant mechanics and thoughtful level progression.
-            The game was well-received across freeware game aggregator sites,
-            gaining traction organically through word-of-mouth and community
-            shares. It remains one of my proudest experiments in designing
-            intuitive puzzles with increasing complexity.
-            <br /> <br />
-            These projects have deepened my understanding of both the creative
-            and technical sides of game design, and continue to inspire my work
-            moving forward.
+            One of my flagship projects,{" "}
+            <a href="https://holymahogany.itch.io/thin-ice">Thin Ice</a>, is a
+            fully-featured 2D platformer, built in Pico-8, the fantasy console
+            known for inspiring creative constraints. This game showcases
+            dynamic level design, responsive controls, and custom pixel art. The
+            sound effects and music were composed by the prolific games musician
+            Gruber, whose work brought an extra layer of polish and atmosphere
+            to the experience. The game is available publicly on itch.io, and
+            reflects my commitment to crafting polished, replayable gameplay
+            loops and intuitive user experiences.
+          </div>
+          <div className={styles["projects__images"]}>
+            <Image
+              className={styles["projects__image"]}
+              src={imgPaths.thinIce}
+              alt="watercolor portrait of a woman"
+              width={384}
+              height={384}
+            />
+          </div>
+          <div className={styles["projects__text-body"]}>
+            I also created{" "}
+            <a href="https://holymahogany.itch.io/putting-the-blocks-away">
+              Putting the Blocks Away
+            </a>
+            , a minimalist puzzle game built in Puzzlescript that emphasizes
+            elegant mechanics and thoughtful level progression. The game was
+            well-received across freeware game aggregator sites (even outside
+            the game's original language, as below!), gaining traction
+            organically through word-of-mouth and community shares. It remains
+            one of my proudest experiments in designing intuitive puzzles with
+            increasing complexity. The game was also featured on{" "}
+            <a href="https://thinkygames.com/games/putting-the-blocks-away/">
+              thinkygames.com
+            </a>
+            .
+          </div>
+          <div className={styles["projects__images"]}>
+            <Image
+              className={styles["projects__image"]}
+              src={imgPaths.puttingTheBlocksAway}
+              alt="watercolor portrait of a woman"
+              width={778}
+              height={698}
+            />
+          </div>
+          <div className={styles["projects__text-headline"]} id="editorial">
+            Editorial Illustrations
+          </div>
+          <div className={styles["projects__text-body"]}>
+            In my personal editorial illustration work, I explore narrative,
+            metaphor, and mood through visual storytelling. Each illustration is
+            an opportunity to distill complex ideas into striking, thoughtful
+            visuals. My process involves deep conceptual development, sketching,
+            and refining compositions to communicate a clear message while
+            maintaining a distinctive aesthetic. I focus on bold forms,
+            intentional color palettes, and strong visual metaphors to engage
+            viewers and invite interpretation. These projects not only showcase
+            my range and voice as an illustrator but also reflect my interest in
+            connecting ideas with audiences through visual language.
+          </div>
+          <div className={styles["projects__images"]}>
+            <Image
+              className={styles["projects__image"]}
+              src={imgPaths.groceryStore}
+              alt="watercolor portrait of a woman"
+              width={1080}
+              height={1080}
+            />
+            <div className={styles["projects__imageSpacer"]} />
+            <Image
+              className={styles["projects__image"]}
+              src={imgPaths.things1}
+              alt="watercolor portrait of a woman"
+              width={1080}
+              height={1080}
+            />
+            <div className={styles["projects__imageSpacer"]} />
+            <Image
+              className={styles["projects__image"]}
+              src={imgPaths.readingWhileWalking}
+              alt="watercolor portrait of a woman"
+              width={1080}
+              height={1080}
+            />
+            <div className={styles["projects__imageSpacer"]} />
+            <Image
+              className={styles["projects__image"]}
+              src={imgPaths.things2}
+              alt="watercolor portrait of a woman"
+              width={1080}
+              height={1080}
+            />
           </div>
         </div>
       </div>

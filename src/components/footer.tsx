@@ -6,8 +6,8 @@ const Footer = () => {
       <div className={styles["footer-container"]}>
         <div className={styles["footer-name"]}>&copy; Peter Smyth 2025</div>
         <div className={styles["footer-hm"]}>
-          My domain name &mdash; &quot;holy mahogany&quot; &mdash; was a
-          nickname given to the great modernist László Moholy-Nagy.{" "}
+          My pen name &mdash; &quot;holy mahogany&quot; &mdash; was a nickname
+          given to the great modernist László Moholy-Nagy.{" "}
           <a href="https://moholy-nagy.org/">Visit his foundation.</a>
         </div>
       </div>
