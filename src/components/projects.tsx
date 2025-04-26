@@ -55,7 +55,7 @@ const Projects = () => {
             <Image
               className={styles["projects__image"]}
               src={imgPaths.DocDeltaConcept1}
-              alt="watercolor portrait of a woman"
+              alt="DocDelta homepage"
               width={980}
               height={735}
             />
@@ -63,7 +63,7 @@ const Projects = () => {
             <Image
               className={styles["projects__image"]}
               src={imgPaths.DocDeltaConcept3}
-              alt="watercolor portrait of a woman"
+              alt="DocDelta tab interface"
               width={980}
               height={735}
             />
@@ -71,7 +71,7 @@ const Projects = () => {
             <Image
               className={styles["projects__image"]}
               src={imgPaths.DocDeltaConcept2}
-              alt="watercolor portrait of a woman"
+              alt="DocDelta accordion"
               width={980}
               height={735}
             />
@@ -97,7 +97,7 @@ const Projects = () => {
             <Image
               className={styles["projects__image"]}
               src={imgPaths.Poster1}
-              alt="watercolor portrait of a woman"
+              alt="Queer Contemporary China poster"
               width={2550}
               height={3300}
             />
@@ -105,7 +105,7 @@ const Projects = () => {
             <Image
               className={styles["projects__image"]}
               src={imgPaths.Poster3}
-              alt="watercolor portrait of a woman"
+              alt="Cartoon Theory poster"
               width={1275}
               height={1595}
             />
@@ -114,11 +114,11 @@ const Projects = () => {
             Independent Game Projects
           </div>
           <div className={styles["projects__text-body"]}>
-            As an independent game designer (under the pen name "Holy
-            Mahogany"), I’ve taken on every aspect of development—from concept
-            to publishing—across multiple self-driven projects. My work reflects
-            a passion for tight mechanics, compelling design, and player-first
-            experiences.
+            As an independent game designer (under the pen name &quot;Holy
+            Mahogany&quot;), I’ve taken on every aspect of development—from
+            concept to publishing—across multiple self-driven projects. My work
+            reflects a passion for tight mechanics, compelling design, and
+            player-first experiences.
             <br /> <br />
             One of my flagship projects,{" "}
             <a href="https://holymahogany.itch.io/thin-ice">Thin Ice</a>, is a
@@ -135,7 +135,7 @@ const Projects = () => {
             <Image
               className={styles["projects__image"]}
               src={imgPaths.thinIce}
-              alt="watercolor portrait of a woman"
+              alt="Thin Ice promo"
               width={384}
               height={384}
             />
@@ -148,7 +148,7 @@ const Projects = () => {
             , a minimalist puzzle game built in Puzzlescript that emphasizes
             elegant mechanics and thoughtful level progression. The game was
             well-received across freeware game aggregator sites (even outside
-            the game's original language, as below!), gaining traction
+            the game&apos;s original language, as below!), gaining traction
             organically through word-of-mouth and community shares. It remains
             one of my proudest experiments in designing intuitive puzzles with
             increasing complexity. The game was also featured on{" "}
@@ -161,7 +161,7 @@ const Projects = () => {
             <Image
               className={styles["projects__image"]}
               src={imgPaths.puttingTheBlocksAway}
-              alt="watercolor portrait of a woman"
+              alt="Putting the Blocks Away on a Japanese website"
               width={778}
               height={698}
             />
@@ -185,7 +185,7 @@ const Projects = () => {
             <Image
               className={styles["projects__image"]}
               src={imgPaths.groceryStore}
-              alt="watercolor portrait of a woman"
+              alt="scenes from a grocery store"
               width={1080}
               height={1080}
             />
@@ -193,7 +193,7 @@ const Projects = () => {
             <Image
               className={styles["projects__image"]}
               src={imgPaths.things1}
-              alt="watercolor portrait of a woman"
+              alt="25 everyday objects"
               width={1080}
               height={1080}
             />
@@ -201,7 +201,7 @@ const Projects = () => {
             <Image
               className={styles["projects__image"]}
               src={imgPaths.readingWhileWalking}
-              alt="watercolor portrait of a woman"
+              alt="a woman reads her book while walking distractedly"
               width={1080}
               height={1080}
             />
@@ -209,7 +209,7 @@ const Projects = () => {
             <Image
               className={styles["projects__image"]}
               src={imgPaths.things2}
-              alt="watercolor portrait of a woman"
+              alt="25 more everyday objects"
               width={1080}
               height={1080}
             />

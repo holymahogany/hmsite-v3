@@ -17,7 +17,7 @@ const Summary = () => {
       <div className={styles["summary__outer-container"]}>
         <div className={styles["summary__inner-container"]}>
           <div className={styles["summary__text-headline"]}>
-            I'm a multidisciplinary designer with a passion for visual
+            I&apos;m a multidisciplinary designer with a passion for visual
             storytelling.
           </div>
           <div className={styles["summary__text-body"]}>
