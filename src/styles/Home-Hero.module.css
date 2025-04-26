@@ -22,7 +22,7 @@
   width: 100%;
 }
 .header-left {
-  flex: 1.25;
+  flex: 1.20;
   display: flex;
   justify-content: right;
 }
@@ -48,7 +48,7 @@
   filter: drop-shadow(0px 0px 15px var(--background-color-light));
 }
 .header-middle-spacer {
-  width: 60px;
+  width: 80px;
 }
 .header-right {
   flex: 1;
@@ -68,7 +68,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 0px;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
 .header-right__peter-smyth-container > * {
   margin-bottom: 0px;
@@ -78,11 +78,14 @@
   align-self: center;
   color: var(--title-color);
 }
+.header-right__smyth {
+  text-decoration: underline 0.15em var(--title-color);
+}
 .header-right__links {
   display: flex;
   font-size: 25px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .header-right__links > a {
   color: var(--link-color);
@@ -103,20 +106,6 @@
   padding-right: 8px;
 
   color: var(--link-color);
-}
-.header-right__social-links {
-  display: flex;
-  justify-content: flex-start;
-
-  font-size: 18px;
-
-  color: var(--link-color);
-}
-.header-right__social-link {
-  color: var(--link-color);
-}
-.header-right__social-links-padding {
-  width: 15px;
 }
 .header-background {
   z-index: 1;
@@ -156,6 +145,38 @@
   filter: invert(0%) sepia(2%) saturate(6481%) hue-rotate(329deg)
     brightness(97%) contrast(80%);
 }
+.button {
+  display: inline;
+  width: 162px;
+  align-items: center;
+  background-color: #ec7357;
+  color: #fdfaf5;
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: 0.6rem 0.6rem 0.6rem 1rem;
+  color: val(--link);
+  cursor: pointer;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: left;
+  text-decoration: none;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button span {
+  width: 0px;
+  min-width: 100%;
+  margin-right: 5px;
+  transition: margin-right 0.2s;
+}
+.button:hover span {
+  margin-right: 8px;
+  transition: margin-right 0.2s;
+}
 
 @media (min-width: 1201px) {
   .header {
@@ -189,14 +210,17 @@
   }
   .header-right__peter-smyth-container {
     margin-top: 12px;
-    margin-bottom: 23px;
+    margin-bottom: 25px;
     margin-left: 0px;
   }
   .header-right__peter-smyth-container > * {
-    font-size: 70px;
+    font-size: 65px;
+  }
+  .header-right__smyth {
+    text-decoration: underline 0.15em var(--title-color);
   }
   .header-right__links {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     margin-bottom: 10px;
   }
@@ -209,14 +233,6 @@
 
     padding-left: 8px;
     padding-right: 8px;
-  }
-  .header-right__social-links {
-    display: flex;
-    justify-content: flex-start;
-    font-size: 22px;
-  }
-  .header-right__social-links-padding {
-    width: 20px;
   }
   .header-background-topspacer {
     display: flex;
@@ -236,5 +252,23 @@
   .header-background-bottomspacer {
     display: flex;
     height: 4%;
+  }
+  .button {
+    width: 130px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: 0.5rem 0.5rem 0.5rem .9rem;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .button span {
+    width: 0px;
+    min-width: 100%;
+    margin-right: 5px;
+    transition: none;
+  }
+  .button:hover span {
+    margin-right: 5px;
+    transition: none;
   }
 }

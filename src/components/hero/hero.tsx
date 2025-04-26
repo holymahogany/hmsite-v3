@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { useMediaQuery } from "@mui/material";
 import { useRef } from "react";
 
-import { TitleStatic, TitleAnimated } from "./title";
+import { TitleAnimated } from "./title";
 import styles from "@/styles/Home-Hero.module.css";
 
 const imgPaths = {
-  selfPortrait: "/static/img/hero/selfPortrait.webp",
+  selfPortrait: "/static/img/hero/newSelfPortrait.webp",
   toprow: "/static/img/hero/toprow.webp",
   bottomrow: "/static/img/hero/bottomrow.webp",
   toprowMobile: "/static/img/hero/toprowMobile.webp",
@@ -65,13 +65,6 @@ const Hero = () => {
           <div className={styles["header-right"]}>
             <div className={styles["header-right-container"]}>
               <TitleAnimated />
-              {/* {isMobile ? (
-                <TitleStatic />
-              ) : wasEverMobile.current ? (
-                <TitleStatic />
-              ) : (
-                <TitleAnimated />
-              )} */}
             </div>
           </div>
         </div>

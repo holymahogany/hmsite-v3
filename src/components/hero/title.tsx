@@ -3,64 +3,7 @@ import { motion } from "framer-motion";
 import styles from "@/styles/Home-Hero.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTwitter,
-  faMastodon,
-  faItchIo,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
-import { faAsterisk } from "@fortawesome/free-solid-svg-icons";
-
-export const TitleStatic = () => {
-  return (
-    <div className={styles["header-right-content-container"]}>
-      <div className={styles["header-right__peter-smyth-container"]}>
-        <div>Peter</div>
-        <div>Smyth</div>
-      </div>
-      <div className={styles["header-right__links"]}>
-        <a href="#artist">Artist</a>
-        <div className={styles["header-right__asterisk-container"]}>
-          <FontAwesomeIcon icon={faAsterisk} />
-        </div>
-        <a href="#developer">Developer</a>
-        <div className={styles["header-right__asterisk-container"]}>
-          <FontAwesomeIcon icon={faAsterisk} />
-        </div>
-        <a href="#art-historian">Art Historian</a>
-      </div>
-      <div className={styles["header-right__social-links"]}>
-        <a
-          href="https://twitter.com/holy_mahogany/"
-          className={styles["header-right__social-link"]}
-        >
-          <FontAwesomeIcon icon={faTwitter} />
-        </a>
-        <div className={styles["header-right__social-links-padding"]}></div>
-        <a
-          href="https://mastodon.gamedev.place/@holymahogany/"
-          className={styles["header-right__social-link"]}
-        >
-          <FontAwesomeIcon icon={faMastodon} />
-        </a>
-        <div className={styles["header-right__social-links-padding"]}></div>
-        <a
-          href="https://www.instagram.com/peterjacobsmyth/"
-          className={styles["header-right__social-link"]}
-        >
-          <FontAwesomeIcon icon={faInstagram} />
-        </a>
-        <div className={styles["header-right__social-links-padding"]}></div>
-        <a
-          href="https://holymahogany.itch.io/"
-          className={styles["header-right__social-link"]}
-        >
-          <FontAwesomeIcon icon={faItchIo} />
-        </a>
-      </div>
-    </div>
-  );
-};
+import { faAsterisk, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export const TitleAnimated = () => {
   return (
@@ -79,35 +22,30 @@ export const TitleAnimated = () => {
     >
       <div className={styles["header-right__peter-smyth-container"]}>
         <div>Peter</div>
-        <div>Smyth</div>
+        <div className={styles["header-right__smyth"]}>Smyth</div>
       </div>
       <div className={styles["header-right__links"]}>
-        <a href="#artist">Artist</a>
+        <div>Cartoonist</div>
         <div className={styles["header-right__asterisk-container"]}>
           <FontAwesomeIcon icon={faAsterisk} />
         </div>
-        <a href="#developer">Developer</a>
+        <div>Designer</div>
         <div className={styles["header-right__asterisk-container"]}>
           <FontAwesomeIcon icon={faAsterisk} />
         </div>
-        <a href="#art-historian">Art Historian</a>
+        <div>Teacher</div>
       </div>
-      <div className={styles["header-right__social-links"]}>
-        <a
-          href="https://twitter.com/holy_mahogany/"
-          className={styles["header-right__social-link"]}
-        >
-          <FontAwesomeIcon icon={faTwitter} />
+      <div className={styles["header-right__button-container"]}>
+        <a href="#projects">
+          <button className={styles["button"]}>
+            <span>VIEW PROJECTS</span>
+            <FontAwesomeIcon
+              className={styles["button-arrow"]}
+              icon={faArrowRight}
+            />
+          </button>
         </a>
-        <div className={styles["header-right__social-links-padding"]}></div>
-        <a
-          href="https://mastodon.gamedev.place/@holymahogany/"
-          className={styles["header-right__social-link"]}
-        >
-          <FontAwesomeIcon icon={faMastodon} />
-        </a>
-        <div className={styles["header-right__social-links-padding"]}></div>
-        <a
+        {/* <a
           href="https://www.instagram.com/peterjacobsmyth/"
           className={styles["header-right__social-link"]}
         >
@@ -119,7 +57,7 @@ export const TitleAnimated = () => {
           className={styles["header-right__social-link"]}
         >
           <FontAwesomeIcon icon={faItchIo} />
-        </a>
+        </a> */}
       </div>
     </motion.div>
   );
