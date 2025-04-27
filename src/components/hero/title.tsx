@@ -39,10 +39,6 @@ export const TitleAnimated = () => {
         <a href="#projects">
           <button className={styles["button"]}>
             <span>VIEW PROJECTS</span>
-            <FontAwesomeIcon
-              className={styles["button-arrow"]}
-              icon={faArrowRight}
-            />
           </button>
         </a>
         {/* <a

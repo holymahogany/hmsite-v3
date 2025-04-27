@@ -4,6 +4,9 @@ import { useRef } from "react";
 
 import styles from "@/styles/Home-Projects.module.css";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
 const imgPaths = {
   DocDeltaConcept1: "/static/img/hero/DocDeltaConcept1.webp",
   DocDeltaConcept2: "/static/img/hero/DocDeltaConcept2.webp",
@@ -46,8 +49,13 @@ const Projects = () => {
             The result is a cleaner, more interactive site that improves
             usability across devices. (Refresh published; redesign concept not
             published. Images below are from the redesign.)
-            <br />
-            <br />
+            <div className={styles["projects__button-container"]}>
+              <a href="https://tdghealth.vercel.app/">
+                <button className={styles["button"]}>
+                  <span>VIEW LIVE TDGHEALTH CONCEPT</span>
+                </button>
+              </a>
+            </div>
             Technologies used: React.js, Next.js, Typescript, Framer Motion,
             Node.js, Figma, and PHP.
           </div>
